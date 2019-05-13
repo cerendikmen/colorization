@@ -40,8 +40,8 @@ def imgs2qmat(train_lab, grid_size, inf_a, sup_a, inf_b, sup_b):
 			print(n,' images converted to matrix.')	
 		for i in range(0, 32):
 			for j in range(0, 32):
-				k = np.floor(train_lab[n][i][j][0])
-				l = np.floor(train_lab[n][i][j][1])
+				k = int(np.floor(train_lab[n][i][j][0])) #JONAS: Casted these to int
+				l = int(np.floor(train_lab[n][i][j][1]))
 				qmat[k][l] += 1
 			
 	return qmat, train_lab
@@ -51,7 +51,7 @@ def get_lab_bins(qmat, bin_indices):
 	Q = int(np.sum(np.sign(qmat)))
 	print('Q: ', Q)
 	bins_splited = np.split(bin_indices,1000)
-	for setnumber subset in enumerate(bins_splited):
+	for subset in enumerate(bins_splited):
 		lab_bins = np.memmap('QVectors_' + setnumber, mode='w+', shape = (len(subset),32,32,Q), dtype ='float64')
 		for n in range(0,len(subset)):
 			for i in range(0,32):
