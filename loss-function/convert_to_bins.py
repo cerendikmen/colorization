@@ -8,11 +8,12 @@ from tempfile import TemporaryFile
 # Read data
 path = str(Path().absolute().parent)
 path += '/cifar-10-python/cifar-10-batches-py/'
-train_rgb, train_labels, test_rgb, test_labels = load_cifar10_data(path)
+no_of_batches = 1
+train_rgb, train_labels, test_rgb, test_labels = load_cifar10_data(path, no_of_batches) #HARA's EDIT PENDING REVIEW
 
 # Convert data from RGB to LAB
-N = 50000
-train_lab = np.ndarray(shape=(N, 32, 32, 3), dtype=np.int8, order='C')
+N = len(train_rgb) #HARA'S EDIT PENDING REVIEW
+train_lab = np.ndarray(shape=(N, 32, 32, 3), dtype=np.int8, order='C') #HARA: THIS SEEMS TO BE DUPLICATE OF LINE 32 IN extract_cifar10.py
 for n in range(0, N):
 	if n%1000==0:
 		print(n,' images converted to LAB.')	

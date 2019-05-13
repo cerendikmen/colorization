@@ -10,13 +10,13 @@ def unpickle(file):
 	return data
 
 
-def load_cifar10_data(data_dir):
+def load_cifar10_data(data_dir, no_of_batches): #HARA's EDIT PENDING REVIEW
 	'''Return train_data, train_labels, test_data, test_labels
-	The shape of data is 32 x 32 x3'''
+	The shape of data is N x 32 x 32 x 3''' #HARA'S EDIT PENDING REVIEW
 	train_data = None
 	train_labels = []
 
-	for i in range(1, 6):
+	for i in range(1, 1+no_of_batches): #HARA's EDIT PENDING REVIEW
 		data_dic = unpickle(data_dir + "/data_batch_{}".format(i))
 		if i == 1:
 			train_data = data_dic['data']
