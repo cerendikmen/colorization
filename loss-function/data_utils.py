@@ -44,7 +44,7 @@ def imgs2qmat(train_lab, grid_size, inf_a, sup_a, inf_b, sup_b):
 				l = int(np.floor(train_lab[n][i][j][1]))
 				qmat[k][l] += 1
 			
-	return qmat, train_lab
+	return qmat
 
 # lab_bins stores for each pixel the bin (starting at 0, up to Q) corresponding to that pixel
 def get_lab_bins(qmat, bin_indices):

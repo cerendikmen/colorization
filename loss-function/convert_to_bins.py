@@ -13,7 +13,7 @@ train_rgb, train_labels, test_rgb, test_labels = load_cifar10_data(path, no_of_b
 
 # Convert data from RGB to LAB
 N = len(train_rgb) #HARA'S EDIT PENDING REVIEW
-train_lab = np.ndarray(shape=(N, 32, 32, 3), dtype=np.int8, order='C') #HARA: THIS SEEMS TO BE DUPLICATE OF LINE 32 IN extract_cifar10.py
+train_lab = np.ndarray(shape=(N, 32, 32, 3), dtype=np.int8, order='C')
 for n in range(0, N):
 	if n%1000==0:
 		print(n,' images converted to LAB.')	
