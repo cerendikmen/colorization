@@ -36,8 +36,8 @@ def imgs2qmat(train_lab, grid_size, inf_a, sup_a, inf_b, sup_b):
 	train_lab = train_lab / grid_size
 	
 	for n in range(0, len(train_lab)):
-		if n%1000==0:
-			print(n,' images converted to matrix.')	
+		if n%1==0:
+			print(n+1,' images converted to matrix.')	
 		for i in range(0, 32):
 			for j in range(0, 32):
 				k = int(np.floor(train_lab[n][i][j][0])) #JONAS: Casted these to int
