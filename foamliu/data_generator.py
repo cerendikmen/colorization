@@ -11,7 +11,7 @@ from config import batch_size, img_rows, img_cols, nb_neighbors
 
 #image_folder = '/mnt/code/ImageNet-Downloader/image/resized'
 # this path must be updated for our data, DONE
-image_folder = '/home/cerendikmen/Colorful-Image-Colorization/tinyimagenet/n01443537/images'
+image_folder = '/home/hara_p_kumar/colorization/foamliu/tinyimagenet/n01443537/images'
 
 
 def get_soft_encoding(image_ab, nn_finder, nb_q):
