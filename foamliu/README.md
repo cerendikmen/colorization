@@ -1,3 +1,11 @@
+# Note on modifications made by DD2424 Group 19
+
+The code had been modified to run on the cifar-10 dataset. To run this code, do the following:
+- cifar-10.tar contains images from cifar-10 dataset, extract to a new directory
+- update data_generator.py and demo.py with the location of cifar-10 directory
+- config.py contains batch_size, epoch, and patience parameters you can tweek
+- train.py is where you can instruct the model what loss function to use and tweak the learning rate
+
 # Colorful Image Colorization
 
 This is a keras implementation of paper [Colorful Image Colorization](https://arxiv.org/abs/1603.08511).
