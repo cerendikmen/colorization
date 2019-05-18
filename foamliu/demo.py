@@ -21,7 +21,7 @@ if __name__ == '__main__':
     print(model.summary())
 
     image_folder = '/home/tjeriph/Colorful-Image-Colorization_2/cifar-10/'
-    names_file = 'valid_names.txt'
+    names_file = 'test_names.txt'
     with open(names_file, 'r') as f:
         names = f.read().splitlines()
 
